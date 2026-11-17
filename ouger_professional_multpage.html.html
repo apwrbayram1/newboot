@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100a1c">
+<title>اوگر | OUGER</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+:root{--bg:#0b0813;--panel:#171123;--panel2:#211631;--line:#38284b;--text:#faf5ff;--muted:#b3a5c6;--pink:#ff559d;--violet:#a477ff;--teal:#6ce9dc;--gold:#ffcc78;--red:#ff718e}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 10% 0%,#392153 0,transparent 34%),radial-gradient(ellipse at 100% 40%,#35182f 0,transparent 30%),var(--bg);color:var(--text);font-family:Vazirmatn,Tahoma,sans-serif;min-height:100vh}button,input,select,textarea{font:inherit}button{cursor:pointer;transition:.2s}button:hover{filter:brightness(1.1);transform:translateY(-1px)}button:disabled{opacity:.5;cursor:not-allowed;transform:none}.hidden{display:none!important}
+.login-screen{min-height:100vh;display:grid;place-items:center;padding:22px}.login-card{width:min(430px,100%);padding:34px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,#211630f5,#110c1bf7);box-shadow:0 30px 100px #0008;text-align:center}.logo{width:62px;height:62px;margin:0 auto 16px;display:grid;place-items:center;border-radius:20px;background:linear-gradient(135deg,var(--pink),var(--violet));font-size:30px;box-shadow:0 12px 35px #d74d9e35}.login-card h1{font-size:32px;margin:0}.login-card p{color:var(--muted);font-size:13px;line-height:2}.input{width:100%;background:#0d0915;border:1px solid var(--line);color:var(--text);padding:13px 14px;border-radius:13px;outline:none}.input:focus{border-color:var(--violet)}.login-card .input{text-align:center;letter-spacing:3px;margin:12px 0}.btn{border:0;border-radius:13px;padding:12px 17px;font-weight:700;color:white;background:#ffffff0d;border:1px solid var(--line)}.primary{background:linear-gradient(110deg,var(--pink),var(--violet));border:0;box-shadow:0 8px 24px #a477ff28}.gold{background:linear-gradient(110deg,#ffcf7a,#ff8d9f);color:#29162b;border:0}.wide{width:100%}.error{min-height:22px;color:var(--red);font-size:12px}.tiny{font-size:11px!important;color:#887a9c!important}
+.app{max-width:1240px;margin:auto;padding:18px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:8px 0 22px}.brand{display:flex;align-items:center;gap:11px;font-size:24px;font-weight:800}.brand .logo{width:44px;height:44px;margin:0;border-radius:14px;font-size:22px}.brand small{display:block;color:var(--muted);font-size:10px;font-weight:500}.top-actions{display:flex;gap:8px;align-items:center}.pill{border:1px solid var(--line);border-radius:99px;padding:9px 13px;background:#ffffff08;color:var(--text);font-size:12px}.pill.vip{background:linear-gradient(100deg,#ffca72,#ff8c9c);color:#2a1630;border:0;font-weight:800}.layout{display:grid;grid-template-columns:225px minmax(0,1fr);gap:18px}.sidebar{align-self:start;position:sticky;top:15px;padding:14px;border:1px solid var(--line);border-radius:22px;background:#130e1eeb}.side-label{font-size:10px;color:#847493;padding:10px 12px}.nav{width:100%;text-align:right;padding:12px;border:1px solid transparent;border-radius:12px;background:transparent;color:#c9bdd8;margin:2px 0;display:flex;gap:10px;align-items:center}.nav.active{background:linear-gradient(100deg,#ff559d20,#a477ff1a);border-color:#8c5dc74d;color:white}.nav span:first-child{width:23px;text-align:center;font-size:17px}.side-note{margin-top:17px;border-radius:15px;padding:13px;background:#ffffff07;border:1px solid #ffffff0c;font-size:11px;line-height:1.8;color:var(--muted)}.content{min-width:0}.page{display:none;animation:fade .22s ease}.page.active{display:block}@keyframes fade{from{opacity:.3;transform:translateY(5px)}to{opacity:1;transform:none}}.welcome{border:1px solid var(--line);border-radius:25px;padding:30px;background:radial-gradient(circle at 90% 10%,#8545a83d,transparent 34%),linear-gradient(120deg,#20132e,#120d1b);display:grid;grid-template-columns:1.2fr .8fr;gap:15px;align-items:center}.eyebrow{font-size:11px;color:var(--teal);border:1px solid #6ce9dc33;background:#6ce9dc0d;border-radius:99px;padding:7px 10px;display:inline-flex;align-items:center;gap:7px}.dot{width:7px;height:7px;background:var(--teal);border-radius:50%;box-shadow:0 0 10px var(--teal)}h1,h2,h3,p{margin-top:0}.welcome h1{font-size:clamp(32px,4vw,49px);line-height:1.35;margin:17px 0 9px;letter-spacing:-1px}.gradient{background:linear-gradient(90deg,#ff79b5,#b79aff,#6ce9dc);color:transparent;background-clip:text}.welcome p{color:var(--muted);font-size:13px;line-height:2}.row-buttons{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.hero-profiles{display:flex;justify-content:center;align-items:center;gap:9px}.hero-profiles img{width:74px;height:108px;object-fit:cover;border-radius:20px;border:1px solid #ffffff2a}.hero-profiles img:nth-child(2){width:95px;height:140px;border:2px solid var(--pink);box-shadow:0 10px 30px #0006}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:15px 0}.stat,.panel,.feature{border:1px solid var(--line);background:linear-gradient(145deg,#1a1327ed,#120d1cf2);border-radius:19px;padding:17px}.stat small{display:block;color:var(--muted);font-size:11px}.stat strong{font-size:22px;display:block;margin-top:5px}.section-title{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:25px 0 13px}.section-title h2{font-size:20px;margin:0 0 4px}.section-title p{color:var(--muted);font-size:12px;margin:0}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.feature{padding:19px}.feature-icon{width:43px;height:43px;border-radius:14px;display:grid;place-items:center;background:#ffffff0a;font-size:21px}.feature h3{font-size:15px;margin:13px 0 6px}.feature p{color:var(--muted);font-size:12px;line-height:1.9;min-height:46px}.feature button{margin-top:6px}.page-header{padding:22px;border:1px solid var(--line);border-radius:21px;background:linear-gradient(110deg,#24152f,#151020);margin-bottom:15px}.page-header h1{font-size:27px;margin:0 0 7px}.page-header p{color:var(--muted);font-size:12px;margin:0;line-height:1.9}.panel{padding:21px;margin-bottom:14px}.panel h3{font-size:17px;margin-bottom:7px}.muted{color:var(--muted);font-size:12px;line-height:1.9}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.field label{display:block;color:#c9bdd8;font-size:12px;margin:0 0 7px}.field select,.field input{width:100%;background:#0d0915;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:12px;outline:none}.form-actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:15px}.notice{margin-top:14px;padding:14px;border-radius:13px;border:1px solid #a477ff55;background:#a477ff12;font-size:12px;line-height:1.9}.spinner{display:inline-block;width:17px;height:17px;border:2px solid #ffffff35;border-top-color:var(--pink);border-radius:50%;animation:spin .8s linear infinite;vertical-align:middle;margin-left:8px}@keyframes spin{to{transform:rotate(360deg)}}.search-box{padding:17px;border:1px solid #a477ff55;background:#a477ff0e;border-radius:16px;margin-top:14px}.profiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}.person{overflow:hidden;border:1px solid var(--line);background:#0f0b18;border-radius:17px}.person img{width:100%;height:150px;object-fit:cover;display:block}.person-info{padding:12px}.person-info strong{font-size:14px}.person-info p{font-size:11px;color:var(--muted);margin:6px 0}.tag{font-size:10px;color:var(--teal)}.live-room{border:1px solid #71435f;background:radial-gradient(circle at 90% 0,#e44e8529,transparent 35%),linear-gradient(130deg,#351a37,#1b122a);padding:25px;border-radius:22px}.live-room h2{font-size:25px;margin:14px 0 7px}.live-room p{color:#d1bdd9;font-size:12px;line-height:2}.live-screen{min-height:180px;border:1px dashed #8d648d;border-radius:17px;display:grid;place-items:center;text-align:center;margin:18px 0;background:#0a071477;padding:20px}.live-screen .big{font-size:40px}.wallet{direction:ltr;overflow-wrap:anywhere;background:#0b0812;border:1px dashed #59446e;padding:14px;border-radius:13px;color:#d9c7f1;font-size:12px;line-height:1.8}.payment-status{margin-top:15px;padding:14px;border-radius:13px;background:#ffc86b10;border:1px solid #ffc86b4d;color:var(--gold);font-size:13px;line-height:1.9}.steps{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0}.step{border:1px solid var(--line);background:#ffffff06;border-radius:11px;padding:10px 12px;color:var(--muted);font-size:11px}.step.active{border-color:#ffca7277;color:var(--gold);background:#ffca7210}.vip-card{border:1px solid #8e6a40;border-radius:22px;padding:24px;background:radial-gradient(circle at 100% 0,#ffca7224,transparent 40%),#191222}.vip-card h2{font-size:26px}.price{font-size:31px;font-weight:800;color:var(--gold);margin:15px 0}.vip-list{list-style:none;padding:0;color:#d7c8e3;font-size:13px;line-height:2.4}.vip-list li:before{content:'✦';color:var(--gold);margin-left:8px}.bottom-note{color:#82748f;text-align:center;font-size:10px;padding:22px}.modal-backdrop{position:fixed;inset:0;z-index:20;background:#05030bdc;backdrop-filter:blur(8px);display:none;place-items:center;padding:18px}.modal-backdrop.open{display:grid}.modal{position:relative;width:min(420px,100%);border:1px solid #49375e;background:#181122;border-radius:23px;padding:25px;box-shadow:0 30px 100px #0009}.modal .logo{width:47px;height:47px;border-radius:15px;font-size:22px;margin:0 0 16px}.modal h2{font-size:22px;margin-bottom:7px}.modal p{font-size:12px;color:var(--muted);line-height:1.9}.modal .input{margin:9px 0 12px}.close{position:absolute;left:14px;top:14px;width:33px;height:33px;border:1px solid var(--line);background:#ffffff09;color:white;border-radius:10px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:static;display:flex;gap:5px;overflow:auto;padding:8px}.side-label,.side-note{display:none}.nav{white-space:nowrap;width:auto;flex:0 0 auto;padding:10px}.welcome{grid-template-columns:1fr}.hero-profiles{padding:8px}.features{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:620px){.app{padding:12px}.topbar{align-items:flex-start}.brand{font-size:21px}.top-actions{flex-direction:column;align-items:stretch}.welcome{padding:22px}.welcome h1{font-size:34px}.stats{gap:7px}.stat{padding:12px}.stat strong{font-size:18px}.features,.grid3,.profiles{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.person{display:flex}.person img{width:105px;height:120px}.page-header{padding:18px}.panel{padding:16px}.hero-profiles img{width:65px;height:95px}.hero-profiles img:nth-child(2){width:84px;height:125px}}
+</style>
+</head>
+<body>
+<!-- صفحه ورود اولیه -->
+<section id="loginScreen" class="login-screen">
+  <div class="login-card">
+    <div class="logo">◉</div>
+    <h1>اوگر <span class="gradient">OUGER</span></h1>
+    <p>به دنیای گفت‌وگوهای تازه خوش آمدی.<br>برای ورود به پنل، رمز عبور را وارد کن.</p>
+    <form id="loginForm">
+      <input id="loginPassword" class="input" type="password" placeholder="رمز عبور" autocomplete="current-password" required aria-label="رمز عبور">
+      <button class="btn primary wide" type="submit">ورود به اوگر ←</button>
+      <div id="loginError" class="error" aria-live="polite"></div>
+    </form>
+    <p class="tiny">نسخه نمایشی · رمز نمونه: admin</p>
+  </div>
+</section>
+
+<!-- برنامه چندصفحه‌ای -->
+<div id="app" class="app hidden">
+  <header class="topbar">
+    <div class="brand"><div class="logo">◉</div><div>اوگر <small>OUGER · آشنایی‌های تازه</small></div></div>
+    <div class="top-actions"><button class="pill" onclick="navigate('profile')">👤 پروفایل من</button><button class="pill vip" onclick="navigate('vip')">✦ عضویت VIP</button><button class="pill" onclick="logout()">خروج ↗</button></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="side-label">منوی اصلی</div>
+      <button class="nav active" data-page="home" onclick="navigate('home')"><span>⌂</span> صفحه اصلی</button>
+      <button class="nav" data-page="random" onclick="navigate('random')"><span>🎲</span> چت با ناشناس</button>
+      <button class="nav" data-page="interests" onclick="navigate('interests')"><span>⌕</span> جستجو با علایق</button>
+      <button class="nav" data-page="live" onclick="navigate('live')"><span>◉</span> اتاق لایو میسترس</button>
+      <button class="nav" data-page="vip" onclick="navigate('vip')"><span>✦</span> بخش VIP</button>
+      <button class="nav" data-page="purchase" onclick="navigate('purchase')"><span>◇</span> خرید اشتراک</button>
+      <button class="nav" data-page="profile" onclick="navigate('profile')"><span>♙</span> پروفایل من</button>
+      <div class="side-note">✦ <b>فضای محترمانه</b><br>اطلاعات شخصی دیگران را بدون اجازه منتشر نکن. این نسخه برای نمایش رابط کاربری است.</div>
+    </aside>
+
+    <main class="content">
+      <!-- صفحه خانه -->
+      <section class="page active" id="page-home">
+        <div class="welcome">
+          <div>
+            <span class="eyebrow"><span class="dot"></span> یک گفت‌وگوی تازه در انتظار توست</span>
+            <h1>آشنا شو،<br><span class="gradient">گفت‌وگو را شروع کن</span></h1>
+            <p>آدم‌های جدید را کشف کن، علایق مشترک پیدا کن و وارد اتاق‌های گفت‌وگو شو. اوگر جایی برای شروع آشنایی‌های تازه است.</p>
+            <div class="row-buttons"><button class="btn primary" onclick="navigate('random')">🎲 چت با ناشناس</button><button class="btn" onclick="navigate('interests')">⌕ جستجوی پیشرفته</button></div>
+          </div>
+          <div class="hero-profiles">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=250&q=80" alt="تصویر نمونه پروفایل">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="تصویر نمونه پروفایل">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=250&q=80" alt="تصویر نمونه پروفایل">
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat"><small>روش آشنایی</small><strong>تصادفی 🎲</strong></div>
+          <div class="stat"><small>جستجوی شخصی</small><strong>۶ فیلتر</strong></div>
+          <div class="stat"><small>اتاق اختصاصی</small><strong>میسترس ◉</strong></div>
+        </div>
+        <div class="section-title"><div><h2>از کجا شروع کنیم؟</h2><p>برای رفتن به هر بخش روی کارت کلیک کن.</p></div></div>
+        <div class="features">
+          <article class="feature"><div class="feature-icon">🎲</div><h3>چت با ناشناس</h3><p>جستجوی هم‌صحبت با وضعیت «در حال جستجو».</p><button class="btn primary wide" onclick="navigate('random')">شروع چت ←</button></article>
+          <article class="feature"><div class="feature-icon">⌕</div><h3>جستجو با علایق من</h3><p>انتخاب سن، شهر، قد، جنسیت و فیلترهای دلخواه.</p><button class="btn wide" onclick="navigate('interests')">تنظیم فیلترها ←</button></article>
+          <article class="feature"><div class="feature-icon">🎙️</div><h3>اتاق لایو میسترس</h3><p>صفحه اختصاصی اتاق زنده و اطلاعات ورود.</p><button class="btn wide" onclick="navigate('live')">ورود به اتاق ←</button></article>
+        </div>
+      </section>
+
+      <!-- صفحه چت ناشناس -->
+      <section class="page" id="page-random">
+        <div class="page-header"><h1>🎲 چت با ناشناس</h1><p>برای دسترسی به جستجوی تصادفی، قفل این بخش را باز کن. بعد از تأیید رمز، وضعیت جستجو نمایش داده می‌شود.</p></div>
+        <div class="panel">
+          <h3>آماده‌ای با کسی آشنا شوی؟</h3><p class="muted">برای حفظ امنیت، هیچ اطلاعات واقعی یا هویت تأییدنشده‌ای در این نسخه نمایش داده نمی‌شود.</p>
+          <button class="btn primary" onclick="openGate('چت با ناشناس','رمز عبور را وارد کن تا جستجوی هم‌صحبت شروع شود.','random')">🔒 باز کردن قفل و شروع</button>
+          <div class="search-box hidden" id="randomSearch"><span class="spinner"></span><b>در حال جستجو برای یک هم‌صحبت...</b><p class="muted" style="margin:10px 0 0">این حالت نمایشی است؛ اتصال به کاربران واقعی به سرور و سیستم تطبیق نیاز دارد.</p><div class="form-actions"><button class="btn" onclick="stopRandom()">لغو جستجو</button><button class="btn" onclick="openGate('چت با ناشناس','برای شروع دوباره، رمز عبور را وارد کن.','random')">جستجوی دوباره</button></div></div>
+        </div>
+      </section>
+
+      <!-- صفحه جستجو با علایق -->
+      <section class="page" id="page-interests">
+        <div class="page-header"><h1>⌕ جستجو با علایق من</h1><p>فیلترها را تنظیم کن؛ برای اجرای جستجوی نمایشی باید رمز عبور وارد شود.</p></div>
+        <div class="panel">
+          <div class="grid2">
+            <div class="field"><label for="orientation">گرایش</label><select class="input" id="orientation"><option>فرقی ندارد</option><option>دگرجنس‌گرا</option><option>همجنس‌گرا</option><option>دوجنس‌گرا</option><option>ترجیح می‌دهم نگویم</option></select></div>
+            <div class="field"><label for="age">سن</label><select class="input" id="age"><option>۱۸ تا ۲۴</option><option>۲۵ تا ۳۴</option><option>۳۵ تا ۴۴</option><option>۴۵ به بالا</option></select></div>
+            <div class="field"><label for="city">شهر</label><input class="input" id="city" placeholder="مثلاً تهران یا استانبول"></div>
+            <div class="field"><label for="height">قد</label><select class="input" id="height"><option>فرقی ندارد</option><option>کمتر از ۱۶۰ سانتی‌متر</option><option>۱۶۰ تا ۱۷۰ سانتی‌متر</option><option>۱۷۱ تا ۱۸۰ سانتی‌متر</option><option>بیشتر از ۱۸۰ سانتی‌متر</option></select></div>
+            <div class="field"><label for="gender">جنسیت</label><select class="input" id="gender"><option>فرقی ندارد</option><option>زن</option><option>مرد</option><option>غیردودویی</option><option>ترجیح می‌دهم نگویم</option></select></div>
+            <div class="field"><label for="interest">علاقه مشترک</label><select class="input" id="interest"><option>فرقی ندارد</option><option>موسیقی</option><option>فیلم و سریال</option><option>بازی</option><option>سفر</option><option>کتاب</option><option>گفت‌وگوی دوستانه</option></select></div>
+          </div>
+          <div class="form-actions"><button class="btn primary" onclick="openGate('جستجو با علایق من','برای اجرای جستجو، رمز عبور را وارد کن.','interests')">🔒 جستجوی افراد</button><button class="btn" onclick="resetFilters()">پاک کردن فیلترها</button></div>
+          <div class="search-box hidden" id="interestResults"><span class="spinner" id="interestSpinner"></span><b id="interestHeading">در حال جستجو با علایق شما...</b><p class="muted" id="interestSub">نتیجه‌ها در این نسخه صرفاً پروفایل نمونه هستند.</p><div class="profiles" id="profileResults"></div></div>
+        </div>
+      </section>
+
+      <!-- صفحه اتاق لایو -->
+      <section class="page" id="page-live">
+        <div class="page-header"><h1>🎙️ اتاق لایو میسترس</h1><p>اتاق اختصاصی اوگر برای گفت‌وگوهای زنده و رویدادهای جمعی.</p></div>
+        <div class="live-room">
+          <span class="eyebrow"><span class="dot"></span> LIVE ROOM</span><h2>اتاق لایو میسترس</h2><p>برای ورود به اتاق، ابتدا قفل را باز کن. پخش صوتی/تصویری زنده در این نسخه هنوز به سرویس لایو متصل نشده است.</p>
+          <div class="live-screen"><div><div class="big">🎙️</div><b id="liveStatus">اتاق آماده ورود است</b><p class="muted">پخش زنده هنوز راه‌اندازی نشده</p></div></div>
+          <button class="btn primary" onclick="openGate('اتاق لایو میسترس','برای ورود به اتاق، رمز عبور را وارد کن.','live')">🔒 ورود به اتاق</button>
+        </div>
+      </section>
+
+      <!-- صفحه VIP -->
+      <section class="page" id="page-vip">
+        <div class="page-header"><h1>✦ عضویت VIP</h1><p>صفحه ویژه اعضا؛ ورود نمایشی با رمز و پرداخت اشتراک از بخش خرید.</p></div>
+        <div class="vip-card"><span class="eyebrow">OU GER · VIP CLUB</span><h2>تجربه ویژه اوگر</h2><p class="muted">این کارت نمایشی است؛ امکانات VIP بعد از پیاده‌سازی سرور و تأیید اشتراک فعال می‌شوند.</p><div class="price">VIP <span style="font-size:14px">✦ عضویت ویژه</span></div><ul class="vip-list"><li>دسترسی به بخش VIP</li><li>امکان افزودن امکانات ویژه در نسخه نهایی</li><li>مدیریت وضعیت اشتراک در پنل کاربر</li></ul><div class="row-buttons"><button class="btn gold" onclick="openGate('ورود VIP','رمز ورود بخش VIP را وارد کن.','vip')">🔒 ورود VIP</button><button class="btn" onclick="navigate('purchase')">رفتن به خرید اشتراک ←</button></div></div>
+        <div class="notice">نکته امنیتی: رمز ثابت داخل HTML برای قفل واقعی کافی نیست؛ هر کاربر می‌تواند آن را در کد پیدا کند. احراز هویت واقعی باید سمت سرور انجام شود.</div>
+      </section>
+
+      <!-- صفحه خرید -->
+      <section class="page" id="page-purchase">
+        <div class="page-header"><h1>◇ خرید اشتراک</h1><p>آدرس کیف پول TON را کپی کن و پرداخت را در کیف پول خودت انجام بده.</p></div>
+        <div class="panel">
+          <h3>پرداخت اشتراک با TON</h3><p class="muted">آدرس دریافتی شما در این قسمت قرار گرفته است. قبل از پرداخت، شبکه و آدرس را دوباره بررسی کنید.</p>
+          <div class="wallet" id="walletAddress">UQC60I-MCcAjq2EB2voZTByspcg0UUy_7WS_IoC5S-B6nNpo</div>
+          <div class="form-actions"><button class="btn primary" onclick="copyWallet()">کپی آدرس کیف پول</button><button class="btn" onclick="showPaymentPending()">پرداخت را انجام دادم</button></div>
+          <div class="payment-status hidden" id="paymentPending" aria-live="polite">⏳ لطفاً منتظر بمانید؛ پرداخت شما در انتظار بررسی است. این پیام به‌تنهایی به معنی تأیید تراکنش نیست.</div>
+          <div class="steps"><span class="step active">۱. کپی آدرس</span><span class="step">۲. پرداخت در کیف پول</span><span class="step">۳. بررسی تراکنش</span></div>
+          <p class="tiny">این نسخه تراکنش را به‌صورت خودکار بررسی نمی‌کند. برای تأیید واقعی پرداخت، اتصال به API شبکه TON و بک‌اند امن لازم است. هیچ عبارت بازیابی یا کلید خصوصی وارد نکنید.</p>
+        </div>
+      </section>
+
+      <!-- صفحه پروفایل -->
+      <section class="page" id="page-profile">
+        <div class="page-header"><h1>♙ پروفایل من</h1><p>اطلاعات نمایشی خودت را وارد کن. این نسخه اطلاعات را در سرور ذخیره نمی‌کند.</p></div>
+        <div class="panel"><div class="grid2">
+          <div class="field"><label for="myName">نام نمایشی</label><input class="input" id="myName" placeholder="نام مستعار"></div>
+          <div class="field"><label for="myAge">سن</label><input class="input" id="myAge" type="number" min="18" max="99" placeholder="۱۸ یا بیشتر"></div>
+          <div class="field"><label for="myCity">شهر</label><input class="input" id="myCity" placeholder="شهر شما"></div>
+          <div class="field"><label for="myGender">جنسیت</label><select class="input" id="myGender"><option>ترجیح می‌دهم نگویم</option><option>زن</option><option>مرد</option><option>غیردودویی</option></select></div>
+        </div><div class="form-actions"><button class="btn primary" onclick="saveProfile()">ذخیره نمایشی</button><span class="muted" id="profileMessage"></span></div></div>
+      </section>
+    </main>
+  </div>
+  <footer class="bottom-note">اوگر · نسخه نمایشی رابط کاربری · برای انتشار عمومی، سرور امن، مدیریت کاربران و رعایت حریم خصوصی را راه‌اندازی کنید.</footer>
+</div>
+
+<!-- قفل‌های بخش‌ها -->
+<div class="modal-backdrop" id="gateModal" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+  <div class="modal">
+    <button class="close" aria-label="بستن" onclick="closeGate()">×</button><div class="logo">◉</div>
+    <h2 id="gateTitle">ورود به بخش</h2><p id="gateDescription">رمز عبور را وارد کنید.</p>
+    <form id="gateForm"><input class="input" id="gatePassword" type="password" placeholder="رمز عبور" autocomplete="current-password" required><button class="btn primary wide" type="submit">تأیید و ادامه</button><div id="gateError" class="error" aria-live="polite"></div></form>
+    <p class="tiny">رمز نمایشی بخش‌ها: admin</p>
+  </div>
+</div>
+<script>
+/* نمونه نمایشی فقط. احراز هویت و مجوزها را در نسخه واقعی سمت سرور پیاده‌سازی کنید. */
+const DEMO_PASSWORD='admin';
+let pendingAction='home';
+const $=id=>document.getElementById(id);
+
+$('loginForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  if($('loginPassword').value!==DEMO_PASSWORD){$('loginError').textContent='رمز عبور نادرست است؛ دوباره تلاش کنید.';return}
+  $('loginError').textContent='';$('loginScreen').classList.add('hidden');$('app').classList.remove('hidden');navigate('home');
+});
+function logout(){$('app').classList.add('hidden');$('loginScreen').classList.remove('hidden');$('loginPassword').value='';$('loginError').textContent=''}
+function navigate(page){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const target=$('page-'+page);if(!target)return;target.classList.add('active');
+  document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('active',n.dataset.page===page));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function openGate(title,description,action){pendingAction=action;$('gateTitle').textContent=title;$('gateDescription').textContent=description;$('gatePassword').value='';$('gateError').textContent='';$('gateModal').classList.add('open');setTimeout(()=>$('gatePassword').focus(),60)}
+function closeGate(){$('gateModal').classList.remove('open')}
+$('gateModal').addEventListener('click',e=>{if(e.target===$('gateModal'))closeGate()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeGate()});
+$('gateForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  if($('gatePassword').value!==DEMO_PASSWORD){$('gateError').textContent='رمز عبور اشتباه است.';return}
+  const action=pendingAction;closeGate();
+  if(action==='random'){navigate('random');$('randomSearch').classList.remove('hidden')}
+  if(action==='interests'){navigate('interests');runInterestSearch()}
+  if(action==='live'){navigate('live');$('liveStatus').textContent='دسترسی نمایشی باز شد؛ پخش زنده متصل نیست.'}
+  if(action==='vip'){navigate('vip');}
+});
+function stopRandom(){$('randomSearch').classList.add('hidden')}
+function resetFilters(){['orientation','age','city','height','gender','interest'].forEach(id=>{const el=$(id);if(el.tagName==='INPUT')el.value='';else el.selectedIndex=0});$('interestResults').classList.add('hidden')}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function runInterestSearch(){
+  $('interestResults').classList.remove('hidden');$('interestSpinner').classList.remove('hidden');$('interestHeading').textContent='در حال جستجو با علایق شما...';$('profileResults').innerHTML='';
+  setTimeout(()=>{
+    const city=$('city').value.trim();
+    const people=[
+      {name:'آرین',age:26,city:city||'تهران',gender:'مرد',img:'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=350&q=80'},
+      {name:'رها',age:24,city:city||'استانبول',gender:'زن',img:'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=350&q=80'},
+      {name:'سام',age:31,city:city||'شیراز',gender:'مرد',img:'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=350&q=80'}
+    ];
+    $('interestSpinner').classList.add('hidden');$('interestHeading').textContent='پروفایل‌های نمونه';$('interestSub').textContent='این افراد و مشخصات، نمونه‌های نمایشی هستند و کاربران واقعی نیستند.';
+    $('profileResults').innerHTML=people.map(p=>`<article class="person"><img src="${p.img}" alt="تصویر نمونه ${p.name}"><div class="person-info"><strong>${p.name} · ${p.age} سال</strong><p>📍 ${escapeHTML(p.city)}</p><span class="tag">● نمونه · ${p.gender}</span></div></article>`).join('');
+  },1200);
+}
+async function copyWallet(){
+  const value=$('walletAddress').textContent.trim();
+  try{await navigator.clipboard.writeText(value);alert('آدرس کیف پول کپی شد.')}
+  catch(e){const t=document.createElement('textarea');t.value=value;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();alert('آدرس کیف پول کپی شد.')}
+}
+function showPaymentPending(){$('paymentPending').classList.remove('hidden');$('paymentPending').scrollIntoView({behavior:'smooth',block:'center'})}
+function saveProfile(){
+  const age=Number($('myAge').value);
+  if($('myAge').value&&age<18){$('profileMessage').textContent='این سرویس برای افراد ۱۸ سال به بالا طراحی شده است.';return}
+  $('profileMessage').textContent='اطلاعات فقط در همین صفحه نمایش داده می‌شود و در سرور ذخیره نشده است.';
+}
+</script>
+</body>
+</html>
